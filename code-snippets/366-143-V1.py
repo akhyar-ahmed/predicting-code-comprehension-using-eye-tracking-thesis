@@ -9,7 +9,7 @@ class LruCache(object):
 
     def get(self, key):
         with self.lock:
-            record = None 
+            record = None
             try:
                 record = self.cache.pop(key)
                 self.cache[key] = record
